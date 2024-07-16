@@ -1,0 +1,36 @@
+{
+  "name": "expo-updates-client",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "expo start --dev-client",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "eject": "expo eject"
+  },
+  "dependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.14.10",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "expo": "~51.0.20",
+    "expo-build-properties": "~0.12.3",
+    "expo-constants": "~16.0.2",
+    "expo-status-bar": "~1.12.1",
+    "expo-updates": "~0.25.20",
+    "react": "18.2.0",
+    "react-native": "0.74.3",
+    "typescript": "^5.5.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@eslint/compat": "^1.1.1",
+    "@eslint/js": "^9.7.0",
+    "eslint": "^9.7.0",
+    "eslint-plugin-react": "^7.34.4",
+    "globals": "^15.8.0",
+    "prettier": "3.3.3",
+    "typescript-eslint": "^7.16.1"
+  },
+  "private": true
+}
