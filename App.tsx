@@ -35,7 +35,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>Open up App.js to start working on your app bdsfbdksfsdkfds!</Text>
       <Text>{Constants.expoConfig.name}</Text>
       <Image source={require("./assets/favicon.png")} />
       <Text style={styles.headerText}>Updates Demo</Text>

@@ -25,7 +25,7 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.playmgmsports.nj.ent"
+      "bundleIdentifier": "com.test.expoupdatesclient"
     },
     "android": {
       "adaptiveIcon": {
@@ -47,6 +47,11 @@
           "ios": {}
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "47a74d0d-32f9-4482-b96c-1e5eac7e9630"
+      }
+    }
   }
 }
