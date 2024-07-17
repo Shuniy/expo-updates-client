@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Image, Button } from "react-native";
+import { StyleSheet, Text, View, Image, Button, ScrollView, SafeAreaView } from "react-native";
 import Constants from "expo-constants";
 import * as Updates from "expo-updates";
 import React, { useEffect } from "react";
@@ -34,25 +34,33 @@ export default function App() {
     : "This app is running an update";
 
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app bdsfbdksfsdkfds!</Text>
-      <Text>{Constants.expoConfig.name}</Text>
-      <Image source={require("./assets/favicon.png")} />
-      <Text style={styles.headerText}>Updates Demo</Text>
-      <Text>Runtype Message: {runTypeMessage}</Text>
-      <Button onPress={() => Updates.checkForUpdateAsync()} title="Check manually for updates" />
-      {showDownloadButton ? (
-        <Button onPress={() => Updates.fetchUpdateAsync()} title="Download and run update" />
-      ) : null}
-      <Text>Download error: {JSON.stringify(downloadError)}</Text>
-      <Text>Check Error: {JSON.stringify(checkError)}</Text>
-      <Text>Init Error: {JSON.stringify(initializationError)}</Text>
-      <Text>Available Update: {JSON.stringify(availableUpdate)}</Text>
-      <Text>Downloaded Update: {JSON.stringify(downloadedUpdate)}</Text>
-      <Text>Is checking: {isChecking}</Text>
-      <Text>Is downloading: {isDownloading}</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={{ flex: 1 }}>
+      <StatusBar />
+      <ScrollView>
+        <View style={styles.container}>
+          <Text>Open up App.js to start working on your app!</Text>
+          <Text>{Constants.expoConfig.name}</Text>
+          <Image source={require("./assets/favicon.png")} />
+          <Text style={styles.headerText}>Updates Demo</Text>
+          <Text>Runtype Message: {runTypeMessage}</Text>
+          <Button
+            onPress={() => Updates.checkForUpdateAsync()}
+            title="Check manually for updates"
+          />
+          {showDownloadButton ? (
+            <Button onPress={() => Updates.fetchUpdateAsync()} title="Download and run update" />
+          ) : null}
+          <Text>Download error: {JSON.stringify(downloadError)}</Text>
+          <Text>Check Error: {JSON.stringify(checkError)}</Text>
+          <Text>Init Error: {JSON.stringify(initializationError)}</Text>
+          <Text>Available Update: {JSON.stringify(availableUpdate)}</Text>
+          <Text>Downloaded Update: {JSON.stringify(downloadedUpdate)}</Text>
+          <Text>Is checking: {isChecking}</Text>
+          <Text>Is downloading: {isDownloading}</Text>
+          <StatusBar style="auto" />
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
