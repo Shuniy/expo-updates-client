@@ -7,7 +7,7 @@
     "ios": "expo run:ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "create-update": "npx expo export && node ./scripts/exportClientExpoConfig.ts > dist/expoConfig.json"
+    "create-update": "./scripts/create-updates.sh"
   },
   "dependencies": {
     "@types/jest": "^29.5.12",
